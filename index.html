@@ -8,29 +8,42 @@
 
     <base target="_blank">
 
-    <title>Peer connection</title>
+    <title>web audio mixing demo</title>
     <link rel="stylesheet" href="main.css" />
 
 </head>
 
 <body>
-    <lable>Local:</lable><video id="localVideo" autoplay muted controls></video>
-    <lable>Remote:</lable><video id="remoteVideo" autoplay controls></video>
+    <div style="width: 33.3%;float: left">
+        <h3>Local:</h3><br>
+        <video id="localVideo" autoplay muted controls></video>
 
-    <lable>Upload:</lable><video id="uploadVideo" autoplay controls loop muted height="480"></video>
+        <br>
+        <button id="mute_micStream" style="height: 30px;width: 120px;">mute_micStream</button>
+        <button id="unmute_micStream" style="height: 30px;width: 130px;">unmute_micStream</button>
+    </div>
 
+    <div style="width: 33.3%;float: left;">
+        <h3>Upload:</h3><br>
+        <video id="uploadVideo" autoplay controls loop muted height="480"></video>
+
+        <br>
+        <button id="mute_uploadStream" style="height: 30px;width: 150px;">mute_uploadStream</button>
+        <button id="unmute_uploadStream" style="height: 30px;width: 150px;">unmute_uploadStream</button>
+    </div>
+
+    <div style="width: 33.3%;    float: left;">
+        <h3>Remote:</h3><br>
+        <video id="remoteVideo" autoplay controls></video>
+    </div>
 
     <div id="buttonDiv">
+        <hr>
         <button id="startButton" style="margin-left: 40px;">Start</button>
         <button id="callButton">Call</button>
         <button id="hangupButton">Hang Up</button>
         <input id="uploadFile" style="width: 200px;margin-left: 40px;" type="file" value="上传文件"/>
     </div>
-    <button id="mute_micStream" style="height: 30px;width: 120px;margin: 37px;">mute_micStream</button>
-    <button id="unmute_micStream" style="height: 30px;width: 130px;margin: 37px;">unmute_micStream</button>
-
-    <button id="mute_uploadStream" style="height: 30px;width: 150px;margin: 37px;">mute_uploadStream</button>
-    <button id="unmute_uploadStream" style="height: 30px;width: 150px;margin: 37px;">unmute_uploadStream</button>
 
     <!--<script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>-->
     <script src="main.js"></script>
